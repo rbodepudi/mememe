@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9U-GJ-gnK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="fqe-xS-g3l">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="PgY-fj-qbB" userLabel="Share Item">
+                                            <connections>
+                                                <action selector="shareImage:" destination="BYZ-38-t0r" id="GMZ-nX-Xik"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Clear" id="juu-AO-LjK" userLabel="Clear Item">
+                                            <connections>
+                                                <action selector="clearImage:" destination="BYZ-38-t0r" id="8CL-gQ-1As"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bdr-aO-fnT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8E6-aJ-ef0">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Kgf-CG-P5L"/>
+                                    <barButtonItem systemItem="camera" id="VRq-K2-B8J">
+                                        <connections>
+                                            <action selector="pickAnImageUsingCamera:" destination="BYZ-38-t0r" id="Lx7-3u-OR7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="f4v-aW-fOD"/>
+                                    <barButtonItem title="Album" id="eGe-Gx-F2N">
+                                        <connections>
+                                            <action selector="pickAnImageFromLibrary:" destination="BYZ-38-t0r" id="DXj-G8-BSW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8JP-Du-1Uq"/>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ApY-dA-63t" userLabel="Top Text Field">
+                                <rect key="frame" x="20" y="128" width="374" height="18.5"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-9r-56t" userLabel="Bottom Text Field">
+                                <rect key="frame" x="20" y="754.5" width="374" height="18.5"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y9U-GJ-gnK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="19E-Ie-RQ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bdr-aO-fnT" secondAttribute="trailing" id="3Ja-Uv-J3j"/>
+                            <constraint firstItem="Bdr-aO-fnT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="43e-lL-WWy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8E6-aJ-ef0" secondAttribute="trailing" id="AN6-pc-PdF"/>
+                            <constraint firstItem="y9U-GJ-gnK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ICp-SS-WmS"/>
+                            <constraint firstItem="ApY-dA-63t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="Iaw-bV-Wcz"/>
+                            <constraint firstItem="Bdr-aO-fnT" firstAttribute="top" secondItem="y9U-GJ-gnK" secondAttribute="bottom" id="MTg-j7-mug"/>
+                            <constraint firstItem="jqv-9r-56t" firstAttribute="leading" secondItem="8E6-aJ-ef0" secondAttribute="leading" constant="20" id="Mab-Ad-kPf"/>
+                            <constraint firstItem="jqv-9r-56t" firstAttribute="trailing" secondItem="8E6-aJ-ef0" secondAttribute="trailing" constant="-20" id="QLV-00-bcH"/>
+                            <constraint firstItem="8E6-aJ-ef0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S6y-Pm-p3f"/>
+                            <constraint firstItem="ApY-dA-63t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ufn-Ol-ghe"/>
+                            <constraint firstItem="jqv-9r-56t" firstAttribute="bottom" secondItem="8E6-aJ-ef0" secondAttribute="top" constant="-40" id="aJ4-Jp-tJe"/>
+                            <constraint firstItem="8E6-aJ-ef0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gLq-0e-6eS"/>
+                            <constraint firstItem="ApY-dA-63t" firstAttribute="top" secondItem="Bdr-aO-fnT" secondAttribute="top" constant="40" id="gw9-ns-wdO"/>
+                            <constraint firstItem="y9U-GJ-gnK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="owc-TG-gWl"/>
+                            <constraint firstItem="Bdr-aO-fnT" firstAttribute="bottom" secondItem="8E6-aJ-ef0" secondAttribute="top" id="vth-ua-e6p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomTextField" destination="jqv-9r-56t" id="MdZ-Xu-4qm"/>
+                        <outlet property="cameraButtonItem" destination="VRq-K2-B8J" id="FPI-VT-YiO"/>
+                        <outlet property="pickedImageView" destination="Bdr-aO-fnT" id="2cI-5p-itB"/>
+                        <outlet property="shareButtonItem" destination="PgY-fj-qbB" id="re5-np-zxv"/>
+                        <outlet property="toolbar" destination="8E6-aJ-ef0" id="Xye-3l-meD"/>
+                        <outlet property="topTextField" destination="ApY-dA-63t" id="eAP-nQ-evo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
